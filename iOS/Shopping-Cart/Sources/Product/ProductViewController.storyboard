@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zn9-Mc-9XX">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product View Controller-->
+        <scene sceneID="tCW-F2-cdQ">
+            <objects>
+                <viewController id="Zn9-Mc-9XX" customClass="ProductViewController" customModule="Shopping_Cart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZQ6-3H-f9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVg-bk-cou">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-hC-Xww">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="oqh-hC-Xww" secondAttribute="height" multiplier="1:1" id="2eI-aC-97x"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoa-oA-4au">
+                                        <rect key="frame" x="0.0" y="414" width="414" height="83"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZS-5c-Jok" customClass="Label" customModule="Components">
+                                                <rect key="frame" x="16" y="8" width="47.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzQ-NO-RNo" customClass="Label" customModule="Components">
+                                                <rect key="frame" x="16" y="37.5" width="382" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_color">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IZ7-LG-OYY">
+                                                <rect key="frame" x="16" y="62.5" width="216.5" height="14.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10,000円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq6-xo-ME0" customClass="Label" customModule="Components">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="_color">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10,000円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7E-D3-WBq" userLabel="/" customClass="Label" customModule="Components">
+                                                        <rect key="frame" x="67" y="0.0" width="51" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="_color">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xx left in stock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTW-zU-GFa" customClass="Label" customModule="Components">
+                                                        <rect key="frame" x="134" y="0.0" width="82.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="_color">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="IZ7-LG-OYY" firstAttribute="leading" secondItem="aZS-5c-Jok" secondAttribute="leading" id="S3d-n1-Kjd"/>
+                                            <constraint firstItem="XzQ-NO-RNo" firstAttribute="leading" secondItem="aZS-5c-Jok" secondAttribute="leading" id="SxO-Uj-MMr"/>
+                                            <constraint firstItem="XzQ-NO-RNo" firstAttribute="top" secondItem="aZS-5c-Jok" secondAttribute="bottom" constant="8" id="TjN-ot-cGM"/>
+                                            <constraint firstItem="aZS-5c-Jok" firstAttribute="top" secondItem="zoa-oA-4au" secondAttribute="top" constant="8" id="b3R-dp-ojF"/>
+                                            <constraint firstItem="IZ7-LG-OYY" firstAttribute="top" secondItem="XzQ-NO-RNo" secondAttribute="bottom" constant="8" id="bcA-Vq-MKg"/>
+                                            <constraint firstAttribute="trailing" secondItem="XzQ-NO-RNo" secondAttribute="trailing" constant="16" id="cRg-Am-CYP"/>
+                                            <constraint firstAttribute="bottom" secondItem="IZ7-LG-OYY" secondAttribute="bottom" constant="6" id="oqU-sg-vbR"/>
+                                            <constraint firstItem="aZS-5c-Jok" firstAttribute="leading" secondItem="zoa-oA-4au" secondAttribute="leading" constant="16" id="rdz-6B-DNv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oqh-hC-Xww" secondAttribute="trailing" id="2aX-b8-Ynv"/>
+                                    <constraint firstItem="oqh-hC-Xww" firstAttribute="width" secondItem="aVg-bk-cou" secondAttribute="width" id="2x0-k7-d8T"/>
+                                    <constraint firstAttribute="bottom" secondItem="zoa-oA-4au" secondAttribute="bottom" id="4Op-on-rP3"/>
+                                    <constraint firstItem="oqh-hC-Xww" firstAttribute="leading" secondItem="aVg-bk-cou" secondAttribute="leading" id="FxC-6l-m9b"/>
+                                    <constraint firstAttribute="trailing" secondItem="zoa-oA-4au" secondAttribute="trailing" id="O8A-FF-JrY"/>
+                                    <constraint firstItem="oqh-hC-Xww" firstAttribute="top" secondItem="aVg-bk-cou" secondAttribute="top" id="rIA-i4-5Ec"/>
+                                    <constraint firstItem="zoa-oA-4au" firstAttribute="leading" secondItem="aVg-bk-cou" secondAttribute="leading" id="ts7-Oa-Tda"/>
+                                    <constraint firstItem="zoa-oA-4au" firstAttribute="top" secondItem="oqh-hC-Xww" secondAttribute="bottom" id="uc2-dE-1jv"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yko-h0-hg5" customClass="Button" customModule="Components">
+                                <rect key="frame" x="16" y="802" width="382" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CGC-Aq-8gr"/>
+                                </constraints>
+                                <state key="normal" title="Add to Cart"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yko-h0-hg5" firstAttribute="leading" secondItem="3pD-rE-gVJ" secondAttribute="leading" constant="16" id="1fc-pe-fWf"/>
+                            <constraint firstItem="3pD-rE-gVJ" firstAttribute="trailing" secondItem="yko-h0-hg5" secondAttribute="trailing" constant="16" id="6je-Sm-BTN"/>
+                            <constraint firstItem="aVg-bk-cou" firstAttribute="leading" secondItem="3pD-rE-gVJ" secondAttribute="leading" id="9N4-d1-tbk"/>
+                            <constraint firstItem="aVg-bk-cou" firstAttribute="top" secondItem="ZQ6-3H-f9Z" secondAttribute="top" id="9t7-uD-WYp"/>
+                            <constraint firstItem="3pD-rE-gVJ" firstAttribute="bottom" secondItem="aVg-bk-cou" secondAttribute="bottom" id="Cyg-oH-FTq"/>
+                            <constraint firstItem="aVg-bk-cou" firstAttribute="width" secondItem="ZQ6-3H-f9Z" secondAttribute="width" id="Wit-Xk-POj"/>
+                            <constraint firstItem="3pD-rE-gVJ" firstAttribute="trailing" secondItem="aVg-bk-cou" secondAttribute="trailing" id="iLj-8P-xFf"/>
+                            <constraint firstItem="3pD-rE-gVJ" firstAttribute="bottom" secondItem="yko-h0-hg5" secondAttribute="bottom" constant="16" id="lFt-OS-ztf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3pD-rE-gVJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="addToCartButton" destination="yko-h0-hg5" id="3xB-4h-5HC"/>
+                        <outlet property="descriptionLabel" destination="XzQ-NO-RNo" id="UR6-iT-HDg"/>
+                        <outlet property="imageView" destination="oqh-hC-Xww" id="UVq-hb-OEC"/>
+                        <outlet property="nameLabel" destination="aZS-5c-Jok" id="JSq-Ei-LqF"/>
+                        <outlet property="priceLabel" destination="qq6-xo-ME0" id="woQ-va-0Nr"/>
+                        <outlet property="scrollView" destination="aVg-bk-cou" id="Aci-pO-vte"/>
+                        <outlet property="stockLabel" destination="bTW-zU-GFa" id="u6B-Ai-CjG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pg0-jl-kGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155.07246376811597" y="-263.16964285714283"/>
+        </scene>
+    </scenes>
+</document>

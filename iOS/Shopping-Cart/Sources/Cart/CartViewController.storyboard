@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LEi-x5-lHR">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cart View Controller-->
+        <scene sceneID="HDq-Mr-Yja">
+            <objects>
+                <viewController id="LEi-x5-lHR" customClass="CartViewController" customModule="Shopping_Cart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mn6-qb-w96">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hrl-eT-FE4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jC-Ra-SMW" customClass="Button" customModule="Components">
+                                <rect key="frame" x="16" y="802" width="382" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cIT-V2-k0A"/>
+                                </constraints>
+                                <state key="normal" title="Purchase"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hrl-eT-FE4" firstAttribute="leading" secondItem="z68-LT-efI" secondAttribute="leading" id="9QV-co-oIg"/>
+                            <constraint firstItem="5jC-Ra-SMW" firstAttribute="leading" secondItem="z68-LT-efI" secondAttribute="leading" constant="16" id="MfC-TP-29Y"/>
+                            <constraint firstItem="z68-LT-efI" firstAttribute="bottom" secondItem="5jC-Ra-SMW" secondAttribute="bottom" constant="16" id="UDi-yC-ADf"/>
+                            <constraint firstItem="Hrl-eT-FE4" firstAttribute="top" secondItem="z68-LT-efI" secondAttribute="top" id="VNN-Vf-fqC"/>
+                            <constraint firstItem="z68-LT-efI" firstAttribute="bottom" secondItem="Hrl-eT-FE4" secondAttribute="bottom" id="dju-gw-jVv"/>
+                            <constraint firstItem="z68-LT-efI" firstAttribute="trailing" secondItem="Hrl-eT-FE4" secondAttribute="trailing" id="mWy-YR-IlA"/>
+                            <constraint firstItem="z68-LT-efI" firstAttribute="trailing" secondItem="5jC-Ra-SMW" secondAttribute="trailing" constant="16" id="wjM-4Z-sol"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z68-LT-efI"/>
+                    </view>
+                    <connections>
+                        <outlet property="purchaseButton" destination="5jC-Ra-SMW" id="B7c-ja-veM"/>
+                        <outlet property="tableView" destination="Hrl-eT-FE4" id="p21-Kh-1rx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Wb-c1-cS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="210" y="-152"/>
+        </scene>
+    </scenes>
+</document>

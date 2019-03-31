@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Khw-gJ-oJU">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User View Controller-->
+        <scene sceneID="tTw-eg-T0m">
+            <objects>
+                <viewController id="Khw-gJ-oJU" customClass="UserViewController" customModule="Shopping_Cart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bd3-XD-AG7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDc-IO-WoG" customClass="Button" customModule="Components">
+                                <rect key="frame" x="32" y="458" width="350" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rUC-Oh-UA5"/>
+                                </constraints>
+                                <state key="normal" title="Sign Out"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, xxxx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kp-2k-Df6" customClass="Label" customModule="Components">
+                                <rect key="frame" x="170.5" y="372" width="73" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="_color">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Kp-2k-Df6" firstAttribute="centerX" secondItem="Bd3-XD-AG7" secondAttribute="centerX" id="48V-sI-8rr"/>
+                            <constraint firstItem="yDc-IO-WoG" firstAttribute="leading" secondItem="doa-Dm-bPy" secondAttribute="leading" constant="32" id="4bZ-XK-YiS"/>
+                            <constraint firstItem="doa-Dm-bPy" firstAttribute="trailing" secondItem="yDc-IO-WoG" secondAttribute="trailing" constant="32" id="C8U-7D-emt"/>
+                            <constraint firstItem="yDc-IO-WoG" firstAttribute="centerY" secondItem="Bd3-XD-AG7" secondAttribute="centerY" constant="32" id="JuU-An-uCG"/>
+                            <constraint firstItem="1Kp-2k-Df6" firstAttribute="centerY" secondItem="Bd3-XD-AG7" secondAttribute="centerY" constant="-64" id="e0e-47-KlQ"/>
+                            <constraint firstItem="yDc-IO-WoG" firstAttribute="centerX" secondItem="Bd3-XD-AG7" secondAttribute="centerX" id="ggM-oh-8YQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="doa-Dm-bPy"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="1Kp-2k-Df6" id="0FG-hL-b0R"/>
+                        <outlet property="signOutButton" destination="yDc-IO-WoG" id="XtQ-4Y-JUD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cK1-0Y-nYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="-196"/>
+        </scene>
+    </scenes>
+</document>

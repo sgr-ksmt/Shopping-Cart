@@ -1,0 +1,22 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc && cp package.json ./dist && cp config/admin_sdk.json ./dist",
+    "deploy": "firebase deploy --only functions"
+  },
+  "engines": {
+    "node" : "8"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "~7.0.0",
+    "firebase-functions": "^2.3.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^6.9.2",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  },
+  "private": true
+}

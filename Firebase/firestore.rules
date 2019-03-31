@@ -1,0 +1,61 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /users/{userID} {
+      allow get: if isAuthenticated();
+      allow create: if isUserAuthenticated(userID);
+
+      match /cart_items/{cartItemID} {
+        allow get: if isUserAuthenticated(userID);
+        allow list: if isUserAuthenticated(userID);
+        allow create: if isUserAuthenticated(userID)
+                      && validateInt(incomingData().quantity, 0, 100)
+                      && exists(incomingData().product);
+        allow update: if isUserAuthenticated(userID)
+                      && validateInt(incomingData().quantity, 0, 100)
+                      && incomingData().product == existingData().product;
+        allow delete: if isUserAuthenticated(userID);
+      }
+
+      match /orders/{orderID} {
+        allow get: if isUserAuthenticated(userID);
+        allow list: if isUserAuthenticated(userID);
+      }
+    }
+
+    match /products/{productID} {
+      allow get: if isAuthenticated();
+      allow list: if isAuthenticated();
+      allow create: if isAuthenticated()
+                    && validateString(incomingData().name, 1, 40)
+                    && validateString(incomingData().desc, 1, 1000)
+                    && validateInt(incomingData().price, 100, 99999)
+                    && validateInt(incomingData().stock, 0, 999)
+                    && validateInt(incomingData().imageURL, 1, 99999)
+                    && get(incomingData().owner).id == request.auth.uid;
+    }
+  }
+
+  function isAuthenticated() {
+    return request.auth != null;
+  }
+
+  function isUserAuthenticated(userID) {
+    return request.auth.uid == userID;
+  }
+
+  function existingData() {
+    return resource.data;
+  }
+  function incomingData() {
+    return request.resource.data;
+  }
+
+  function validateString(text, min, max) {
+    return text is string && min <= text.size() && text.size() <= max;
+  }
+
+  function validateInt(num, min, max) {
+    return num is int && min <= num && num <= max;
+  }
+}

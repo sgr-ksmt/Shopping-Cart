@@ -1,0 +1,34 @@
+# When updating .swiftlint.yml, do not forget to also update Tests/.swiftlint.yml
+# rules here: https://github.com/realm/SwiftLint/blob/master/Rules.md
+disabled_rules:
+  - line_length
+  - type_body_length
+  - function_body_length
+  - file_length
+  - nesting
+  - type_name
+  - identifier_name
+  - cyclomatic_complexity
+  - function_parameter_count
+  - void_return
+  - redundant_optional_initialization
+  - for_where
+  - block_based_kvo # block-based KVO only seems to work properly on iOS 11+
+  - force_cast
+  - force_try
+  - unused_optional_binding
+  - multiple_closures_with_trailing_closure
+
+opt_in_rules:
+  - overridden_super_call
+  - explicit_init
+
+excluded:
+  - Carthage
+  - Pods
+
+trailing_comma:
+  mandatory_comma: true
+large_tuple:
+  warning: 6
+  error: 6
