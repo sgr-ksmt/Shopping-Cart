@@ -87,10 +87,10 @@ extension CartViewController: UITableViewDelegate {
                 return
             }
             KRProgressHUD.show()
-            let cart = self.cartItems[indexPath.item]
+            let cartItem = self.cartItems[indexPath.item]
             self.cartItems.remove(at: indexPath.item)
             tableView.deleteRows(at: [indexPath], with: .automatic)
-            cart.delete { result in
+            cartItem.delete { result in
                 KRProgressHUD.dismiss()
                 switch result {
                 case .success:

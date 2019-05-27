@@ -31,7 +31,8 @@ service cloud.firestore {
                     && validateString(incomingData().desc, 1, 1000)
                     && validateInt(incomingData().price, 100, 99999)
                     && validateInt(incomingData().stock, 0, 999)
-                    && validateInt(incomingData().imageURL, 1, 99999)
+                    && validateString(incomingData().imageURL, 1, 99999)
+                    && incomingData().publishedTime <= request.time
                     && get(incomingData().owner).id == request.auth.uid;
     }
   }
